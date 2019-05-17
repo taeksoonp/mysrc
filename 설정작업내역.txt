@@ -1,0 +1,41 @@
+필라멘트 직경
+온도센서
+베드 최대 온도 120
+pidtempbed 이게 기본이 off네?
+corexy
+기본값은: 80,80,1600(lead 2),93
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 5, 25 }
+#define DEFAULT_MAX_ACCELERATION      { 9000, 9000, 100, 10000 }
+echo:  M204 P3000.00 R300.00 T3000.00
+->
+#define DEFAULT_RETRACT_ACCELERATION  300
+->
+echo:  M205 S0.00 T0.00 B20000 X20.00 Z0.40 E5.00
+#define DEFAULT_XJERK                 10.0
+#define DEFAULT_YJERK                 10.0
+#define DEFAULT_ZJERK                  0.3
+#define DEFAULT_EJERK                  5.0
+----
+#define EEPROM_SETTINGS // Enable for M500 and M501 commands
+----
+coryYX
+invert x,y,x 전부 다 반대로 뭐이래?
+#define INVERT_X_DIR true
+#define INVERT_Y_DIR false
+#define INVERT_Z_DIR true
+ps. extruder까지-_-; 190512
+#define INVERT_E0_DIR true
+----
+#define PRINTCOUNTER
+sd card, lcd
+#define REPRAP_DISCOUNT_SMART_CONTROLLER
+#define FIX_MOUNTED_PROBE
+----
+// Travel limits (mm) after homing, corresponding to endstop positions.
+ng. #define Z_MIN_POS -6
+nn. #define Z_PROBE_OFFSET_FROM_EXTRUDER -4   // Z offset: -below +above  [the nozzle]
+#define Z_SAFE_HOMING 취소
+----
+베드 켜니까 전원 나간다. duty cycle, 190504
+ps. 다실패 500w smps로 감
