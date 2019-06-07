@@ -78,11 +78,11 @@
   * https://3dprinting.stackexchange.com/questions/7610/getting-e1-thermal-runaway-errors-even-after-replacing-the-heating-element-on-t
   * thermal runaway가 자꾸 나서 조정했다
   * 1. 59 그래도 남
-  * 2. 32도
+  * 2. 16도
   */
 #if ENABLED(THERMAL_PROTECTION_HOTENDS)
   #define THERMAL_PROTECTION_PERIOD 59//<-40 pts        // Seconds
-  #define THERMAL_PROTECTION_HYSTERESIS 32//<-4 pts    // Degrees Celsius
+  #define THERMAL_PROTECTION_HYSTERESIS 16//<-4 pts    // Degrees Celsius
 
   /**
    * Whenever an M104, M109, or M303 increases the target temperature, the
